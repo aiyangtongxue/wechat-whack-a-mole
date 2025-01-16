@@ -28,19 +28,19 @@
 ## 🛠️ 项目结构
 
 📦 打地鼠小游戏
-┣ 📂 audio
-┃ ┣ 🎵 background.mp3
-┃ ┣ 🎵 hit.mp3
-┃ ┗ 🎵 start.mp3
-┣ 📂 images
-┃ ┣ 🖼️ mole.png
-┃ ┣ 🖼️ sound.png
-┃ ┗ 🖼️ mute.png
-┗ 📂 pages
-┗ 📂 index
-┣ 📄 index.js
-┣ 📄 index.wxml
-┗ 📄 index.wxss
+├── 📂 audio
+│   ├── 🎵 background.mp3
+│   ├── 🎵 hit.mp3
+│   └── 🎵 start.mp3
+├── 📂 images
+│   ├── 🖼️ mole.png
+│   ├── 🖼️ sound.png
+│   └── 🖼️ mute.png
+└── 📂 pages
+    └── 📂 index
+        ├── 📄 index.js
+        ├── 📄 index.wxml
+        └── 📄 index.wxss
 
 ## 🌈 主要功能
 
