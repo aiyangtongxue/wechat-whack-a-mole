@@ -1,0 +1,87 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  background-color: #8BC34A;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.score-board {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.sound-control {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.sound-control image {
+  width: 100%;
+  height: 100%;
+}
+
+.game-board {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.hole-row {
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.hole {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #5D4037;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hole.active .mole {
+  transform: translateY(0);
+}
+
+.mole {
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  bottom: 0;
+  left: 10rpx;
+  transform: translateY(100%);
+  transition: transform 0.1s;
+}
+
+.game-controls {
+  padding: 40rpx 0;
+}
+
+.start-button {
+  background-color: #FF5722;
+  color: white;
+  font-size: 36rpx;
+  font-weight: bold;
+  border-radius: 40rpx;
+  padding: 20rpx 60rpx;
+}
+
+.start-button[disabled] {
+  background-color: #BDBDBD;
+  color: #757575;
+}

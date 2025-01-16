@@ -82,7 +82,7 @@ git clone https://github.com/你的用户名/wechat-whack-a-mole.git
 ## 📮 联系我
 
 - 💌 Email: 你的邮箱
-- 🐱 GitHub: https://github.com/aiyangtongxue/whack-a-mole-miniprogram.git
+- 🐱 GitHub: [@你的用户名](https://github.com/你的用户名)
 
 ## 💝 特别感谢
 

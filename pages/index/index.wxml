@@ -1,0 +1,30 @@
+<view class="contner">
+  <view class="game-header">
+    <view class="score-board">
+      <text>得分: {{score}}</text>
+      <text>最高分: {{highScore}}</text>
+    </view>
+    <view class="sound-control" bindtap="toggleSound">
+      <image src="/images/{{isMuted ? 'mute' : 'sound'}}.png" mode="aspectFit" />
+    </view>
+  </view>
+
+  <view class="game-board">
+    <view class="hole-row" wx:for="{{[0,1,2]}}" wx:key="*this" wx:for-index="row">
+      <view class="hole {{currentMole === (row * 3 + col) ? 'active' : ''}}" 
+            wx:for="{{[0,1,2]}}" 
+            wx:key="*this"
+            wx:for-item="col"
+            data-index="{{row * 3 + col}}"
+            bindtap="tapMole">
+        <image class="mole" src="/images/mole.png" mode="aspectFit" />
+      </view>
+    </view>
+  </view>
+
+  <view class="game-controls">
+    <button class="start-button" bindtap="startGame" disabled="{{isPlaying}}">
+      {{isPlaying ? '游戏进行中' : '开始游戏'}}
+    </button>
+  </view>
+</view>
