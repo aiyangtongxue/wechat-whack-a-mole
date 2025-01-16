@@ -1,9 +1,8 @@
 # 🎮 萌萌哒打地鼠小游戏
 
 > 🐹 一起来打地鼠吧！超可爱的微信小程序游戏，让我们一起享受打地鼠的乐趣～
-
 <p align="center">
-  <img src="images/game-preview.png" alt="游戏预览" width="300">
+  <video src="https://github.com/aiyangtongxue/wechat-whack-a-mole/blob/main/WeChat_20250117025054.mp4" alt="游戏预览" width="300" controls></video>
 </p>
 
 ## ✨ 游戏特色
