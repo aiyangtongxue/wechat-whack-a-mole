@@ -25,22 +25,12 @@
 3. 快速点击它们获得分数
 4. 看看自己能打破最高分记录吗？
 
+
 ## 🛠️ 项目结构
 
-📦 打地鼠小游戏
-├── 📂 audio
-│   ├── 🎵 background.mp3
-│   ├── 🎵 hit.mp3
-│   └── 🎵 start.mp3
-├── 📂 images
-│   ├── 🖼️ mole.png
-│   ├── 🖼️ sound.png
-│   └── 🖼️ mute.png
-└── 📂 pages
-    └── 📂 index
-        ├── 📄 index.js
-        ├── 📄 index.wxml
-        └── 📄 index.wxss
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aiyangtongxue/wechat-whack-a-mole/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250117025625.png" alt="项目结构" width="300">
+</p>
 
 ## 🌈 主要功能
 
