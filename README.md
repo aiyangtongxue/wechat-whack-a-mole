@@ -55,15 +55,12 @@
 
 1. 克隆这个可爱的项目到本地
 bash
-git clone https://github.com/你的用户名/wechat-whack-a-mole.git
+git clone https://github.com/aiyangtongxue/wechat-whack-a-mole.git
 
 2. 用微信开发者工具打开项目
 3. 确保所有萌萌哒的资源文件都在正确的位置
 4. 点击运行，开始你的打地鼠之旅！
 
-## 🎨 预览图
-
-[在这里放几张可爱的游戏截图]
 
 ## 🤝 欢迎贡献
 
@@ -82,15 +79,9 @@ git clone https://github.com/你的用户名/wechat-whack-a-mole.git
 
 ## 📮 联系我
 
-- 💌 Email: 你的邮箱
-- 🐱 GitHub: [@你的用户名](https://github.com/你的用户名)
+- 💌 Email: aike1015@qq.com
+- 🐱 GitHub: https://github.com/aiyangtongxue/wechat-whack-a-mole
 
 ## 💝 特别感谢
 
 感谢所有可爱的地鼠们的配合 🐹
-
----
-
-<p align="center">
-  用 ❤️ 制作
-</p>
