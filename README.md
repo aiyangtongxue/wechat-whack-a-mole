@@ -52,6 +52,10 @@ git clone https://github.com/aiyangtongxue/wechat-whack-a-mole.git
 
 2025年1月26日
 
+<p align="center">
+  <img src="https://github.com/aiyangtongxue/wechat-whack-a-mole/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250126061043.png" alt="新增视觉特效展示" width="300">
+</p>
+
 新增功能：
 ## ✨ 视觉特效
 
