@@ -81,6 +81,26 @@ Component({
           app.playBackgroundMusic();
         }
       });
+    },
+
+    checkAudioFiles() {
+      const audioFiles = [
+        '/audio/bgm.mp3',
+        '/audio/start.mp3',
+        '/audio/hit.mp3'
+      ];
+      
+      audioFiles.forEach(path => {
+        const audio = wx.createInnerAudioContext();
+        audio.src = path;
+        audio.onError((res) => {
+          console.error(`音频文件 ${path} 加载失败:`, res);
+          wx.showToast({
+            title: '音频资源加载失败',
+            icon: 'none'
+          });
+        });
+      });
     }
   },
 
@@ -88,6 +108,9 @@ Component({
     attached() {
       const highScore = wx.getStorageSync('highScore') || 0;
       this.setData({ highScore });
+      
+      // 检查音频文件
+      this.checkAudioFiles();
     },
     
     detached() {

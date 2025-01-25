@@ -1,26 +1,22 @@
 App({
-  globalData: {
-    backgroundAudio: null
-  },
+  bgm: null,
 
   onLaunch() {
-    // 创建背景音乐实例
-    this.globalData.backgroundAudio = wx.createInnerAudioContext();
-    this.globalData.backgroundAudio.src = '/audio/background.mp3'; // 添加您的背景音乐文件
-    this.globalData.backgroundAudio.loop = true; // 循环播放
+    // 初始化背景音乐
+    this.bgm = wx.createInnerAudioContext();
+    this.bgm.src = '/audio/bgm.mp3';
+    this.bgm.loop = true;
   },
 
-  // 播放背景音乐
   playBackgroundMusic() {
-    if (this.globalData.backgroundAudio) {
-      this.globalData.backgroundAudio.play();
+    if (this.bgm) {
+      this.bgm.play();
     }
   },
 
-  // 暂停背景音乐
   pauseBackgroundMusic() {
-    if (this.globalData.backgroundAudio) {
-      this.globalData.backgroundAudio.pause();
+    if (this.bgm) {
+      this.bgm.pause();
     }
   }
 }) 

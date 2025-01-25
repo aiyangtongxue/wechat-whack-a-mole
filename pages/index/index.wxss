@@ -1,87 +1,251 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 20rpx;
-  background-color: #8BC34A;
+  background: linear-gradient(
+    180deg, 
+    #64B5F6 0%, /* 更鲜艳的天空蓝 */
+    #90CAF9 35%,
+    #A5D6A7 35%, /* 草地渐变 */
+    #81C784 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* 添加太阳 */
+.container::before {
+  content: '';
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  background: #FFD54F;
+  border-radius: 50%;
+  top: 40rpx;
+  right: 60rpx;
+  box-shadow: 
+    0 0 60rpx #FFA726,
+    inset -15rpx -15rpx 20rpx rgba(0, 0, 0, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 装饰性云朵 */
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50rpx;
+  animation: floatCloud linear infinite;
+}
+
+.cloud:nth-child(1) {
+  width: 160rpx;
+  height: 60rpx;
+  top: 80rpx;
+  left: -160rpx;
+  animation-duration: 15s;
+  animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+  width: 120rpx;
+  height: 45rpx;
+  top: 150rpx;
+  left: -120rpx;
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+
+.cloud:nth-child(3) {
+  width: 180rpx;
+  height: 65rpx;
+  top: 50rpx;
+  left: -180rpx;
+  animation-duration: 18s;
+  animation-delay: 8s;
+}
+
+/* 添加小花装饰 */
+.flower {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background: #FFB74D;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.flower::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    40rpx 0 0 white,
+    0 40rpx 0 white,
+    40rpx 40rpx 0 white;
+}
+
+.game-board {
+  background: rgba(129, 199, 132, 0.9);
+  border-radius: 30rpx;
+  padding: 40rpx;
+  margin: 40rpx 0;
+  box-shadow: 
+    0 8rpx 16rpx rgba(0, 0, 0, 0.1),
+    inset 0 2rpx 4rpx rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.hole {
+  width: 180rpx;
+  height: 180rpx;
+  background: linear-gradient(145deg, #3E2723, #5D4037);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 -8rpx 12rpx rgba(0, 0, 0, 0.5),
+    0 4rpx 8rpx rgba(0, 0, 0, 0.3);
+  border: 6rpx solid #3E2723;
+  position: relative;
+}
+
+.hole::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.mole {
+  width: 85%;
+  height: 85%;
+  transform: translateY(100%);
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 4rpx 6rpx rgba(0, 0, 0, 0.3));
+}
+
+.hole.active .mole {
+  transform: translateY(15%);
+}
+
+.score-board {
+  display: flex;
+  gap: 40rpx;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24rpx 48rpx;
+  border-radius: 50rpx;
+  box-shadow: 
+    0 4rpx 12rpx rgba(0, 0, 0, 0.1),
+    inset 0 2rpx 4rpx rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10rpx);
+}
+
+.score-board text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #2E7D32;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.sound-control {
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 16rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.sound-control image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
 }
 
 .game-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20rpx;
-}
-
-.score-board {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: 32rpx;
-  font-weight: bold;
-}
-
-.sound-control {
-  width: 60rpx;
-  height: 60rpx;
-}
-
-.sound-control image {
-  width: 100%;
-  height: 100%;
-}
-
-.game-board {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20rpx;
+  margin-bottom: 30rpx;
 }
 
 .hole-row {
   display: flex;
-  justify-content: center;
-  gap: 20rpx;
+  justify-content: space-around;
+  margin: 10rpx 0;
 }
 
-.hole {
-  width: 200rpx;
-  height: 200rpx;
-  background-color: #5D4037;
-  border-radius: 50%;
+.game-controls {
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.start-button {
+  background: linear-gradient(145deg, #43A047, #388E3C);
+  color: white;
+  border-radius: 50rpx;
+  padding: 28rpx 90rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  box-shadow: 
+    0 6rpx 12rpx rgba(0, 0, 0, 0.2),
+    inset 0 2rpx 4rpx rgba(255, 255, 255, 0.3);
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.hole.active .mole {
-  transform: translateY(0);
-}
-
-.mole {
-  width: 180rpx;
-  height: 180rpx;
+.start-button::after {
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 10rpx;
-  transform: translateY(100%);
-  transition: transform 0.1s;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
 }
 
-.game-controls {
-  padding: 40rpx 0;
+.start-button:active::after {
+  left: 100%;
 }
 
-.start-button {
-  background-color: #FF5722;
-  color: white;
-  font-size: 36rpx;
-  font-weight: bold;
-  border-radius: 40rpx;
-  padding: 20rpx 60rpx;
+/* 动画定义 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20rpx); }
 }
 
-.start-button[disabled] {
-  background-color: #BDBDBD;
-  color: #757575;
+@keyframes floatCloud {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(1000rpx); }
 }
+
+@keyframes hitEffect {
+  0% { transform: scale(1) rotate(0); }
+  50% { transform: scale(0.9) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+/* 添加装饰性花朵位置 */
+.flower:nth-child(1) { left: 10%; bottom: 15%; }
+.flower:nth-child(2) { right: 15%; bottom: 20%; }
+.flower:nth-child(3) { left: 20%; bottom: 25%; }
+.flower:nth-child(4) { right: 25%; bottom: 10%; }
