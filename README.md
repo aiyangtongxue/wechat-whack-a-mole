@@ -50,30 +50,9 @@ git clone https://github.com/aiyangtongxue/wechat-whack-a-mole.git
 4. 点击运行，开始你的打地鼠之旅！
 
 
-## 🤝 欢迎贡献
+2025年1月26日
 
-- 🌟 如果你喜欢这个项目，欢迎点个 Star
-- 🐛 发现了 bug？提个 Issue 告诉我们
-- 💡 有新想法？欢迎提交 Pull Request
-
-## 📝 开发环境
-
-- 💻 微信开发者工具
-- 📱 基础库：2.19.4+
-
-## 👨‍💻 作者
-
-小地鼠爱好者
-
-## 📮 联系我
-
-- 💌 Email: aike1015@qq.com
-- 🐱 GitHub: https://github.com/aiyangtongxue/wechat-whack-a-mole
-
-## 💝 特别感谢
-
-感谢所有可爱的地鼠们的配合 🐹
-
+新增功能：
 ## ✨ 视觉特效
 
 🌈 精美的视觉设计：
@@ -103,3 +82,27 @@ git clone https://github.com/aiyangtongxue/wechat-whack-a-mole.git
 - 温暖的太阳黄 (#FFD54F)
 - 可爱的花朵橙 (#FFB74D)
 - 纯净的云朵白
+
+## 🤝 欢迎贡献
+
+- 🌟 如果你喜欢这个项目，欢迎点个 Star
+- 🐛 发现了 bug？提个 Issue 告诉我们
+- 💡 有新想法？欢迎提交 Pull Request
+
+## 📝 开发环境
+
+- 💻 微信开发者工具
+- 📱 基础库：2.19.4+
+
+## 👨‍💻 作者
+
+小地鼠爱好者
+
+## 📮 联系我
+
+- 💌 Email: aike1015@qq.com
+- 🐱 GitHub: https://github.com/aiyangtongxue/wechat-whack-a-mole
+
+## 💝 特别感谢
+
+感谢所有可爱的地鼠们的配合 🐹
